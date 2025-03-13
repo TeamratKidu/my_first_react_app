@@ -5,7 +5,7 @@ import searchIcon from './search.svg';
 import MovieCard from "./MovieCard";
 
 //  41a7d216
-const API_URL = "http://www.omdbapi.com/?apikey=41a7d216"
+const API_URL = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}`;
 
 const movie1 = {
         "Title": "Hellboy: The Crooked Man",
@@ -38,7 +38,7 @@ const App = () => {
             <input
                 placeholder="Search for Movies"
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.valueg)}
+                onChange={(e) => setSearchTerm(e.target.value)}
             />
             <img
                 src={searchIcon}

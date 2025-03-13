@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# MovieLand 🎬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React app to search for movies using the [OMDB API](http://www.omdbapi.com/) and display them in a card layout.
 
-## Available Scripts
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Search movies by title
+- Displays movie details (title, year, poster) in a card layout
+- Responsive and clean UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+_(Add a live demo link here if hosted, e.g., on GitHub Pages or Netlify)_  
+Coming soon!
 
-### `npm test`
+## Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/) (v6 or higher)
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the Repository**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install Dependencies**
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Set Up Environment Variables**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   - Create a `.env` file in the root directory.
+   - Add your OMDB API key (get one from [OMDB API](http://www.omdbapi.com/apikey.aspx)):
+     ```env
+     REACT_APP_OMDB_API_KEY=your_api_key_here
+     ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Run the App**
+   ```bash
+   npm start
+   ```
+   The app will be available at `http://localhost:3000`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
+- The app loads with a default search for "Hellboy".
+- Enter a movie title in the search bar and click the search icon to fetch movies.
+- A "No Movies Found" message appears if no results are returned.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `src/App.jsx`: Main component with search logic and UI.
+- `src/MovieCard.jsx`: Component for displaying movie cards.
+- `src/App.css`: Styles for the app.
+- `src/search.svg`: Search icon for the UI.
 
-### Code Splitting
+## Security Note
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- The API key is stored in a `.env` file for development. For production, proxy API requests through a backend to avoid exposing the key.
+- Ensure `.env` is in `.gitignore`.
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m "Add your feature"`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a Pull Request.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is for educational purposes and is not licensed for commercial use.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Notes for GitHub
 
-### Deployment
+- **Badges**: Added shields.io badges for React, JavaScript, and CSS to make the README visually appealing.
+- **Demo Section**: Included a placeholder for a live demo link (e.g., if you host the app on GitHub Pages, Netlify, or Vercel).
+- **Clone URL**: Replace `your-username/your-repo-name` with your actual GitHub username and repository name.
+- **Contributing Section**: Added a standard contributing guide for open-source projects.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Let me know if you need help setting up a live demo or further customization!
